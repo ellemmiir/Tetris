@@ -1,0 +1,99 @@
+
+%btn {
+  background: none;
+  background-color: #e5e1e0;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, .3),
+    inset 2px 2px 2px 1px white,
+    -6px -6px 10px rgb(255, 255, 255, 0.5),
+    inset 0px -3px 1px 1px rgba(204, 198, 197, .5);
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .3),
+      inset 1px 1px 1px 1px white,
+      -6px -6px 10px rgb(255, 255, 255, 0.5),
+      inset 0px -3px 1px 1px rgba(204, 198, 197, .5);
+    cursor: pointer;
+  }
+}
+
+body {
+  background-color: #e5e1e0;
+  margin: 0;
+}
+
+#root canvas {
+  box-shadow: inset 10px 10px 10px rgb(0, 0, 0, 0.1),
+    inset -6px -6px 5px rgb(255, 255, 255, 0.5);
+}
+
+.gameboy {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  &__inner {
+    padding: 60px 15px 80px;
+    background-color: #e5e1e0;
+    border-radius: 35px;
+    box-shadow: 20px 20px 20px rgb(0, 0, 0, 0.05),
+      25px 35px 20px rgb(0, 0, 0, 0.05),
+      25px 30px 30px rgb(0, 0, 0, 0.05),
+      inset 3px 2px 2px 1px rgb(255, 255, 255, 0.8),
+      -6px -6px 10px rgb(255, 255, 255, 0.5);
+  }
+  &__buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-box {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item-btn {
+    padding: 25px;
+    @extend %btn;
+    width: 20px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.main-btn {
+  @extend %btn;
+  padding: 40px;
+}
+
+#up {
+  background-image: url('../images/up.svg');
+}
+
+#down {
+  background-image: url('../images/down.svg');
+}
+
+#right {
+  background-image: url('../images/right.svg');
+}
+
+#left {
+  background-image: url('../images/left.svg');
+}
+
+#power {
+  background-image: url('../images/power.svg');
+}

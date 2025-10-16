@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link id="favicon" rel="icon" type="images/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <div class="gameboy">
+    <div class="gameboy__inner">
+      <div id="root">
+      </div>
+      <div class="gameboy__buttons">
+        <div class="gameboy__item">
+          <button class="gameboy__item-btn" id="up">
+          </button>
+          <div class="gameboy__item-box">
+            <button class="gameboy__item-btn" id="left"></button>
+            <button class="gameboy__item-btn" id="right"></button>
+          </div>
+          <button class="gameboy__item-btn" id="down"></button>
+        </div>
+        <div class="gameboy__item">
+          <button class="gameboy__item-btn main-btn" id="power"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/main.min.js" type="module"></script>
+</body>
+
+</html>
