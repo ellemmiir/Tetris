@@ -68,9 +68,16 @@ export default class Controller {
   }
 
 
+  
+
+
   //click processing (keyboard and mouse)
   handleKeyDown(event) {
     const state = this.game.getState();
+
+     if (!this.isPlaying && event.keyCode !== 13) {
+       return;
+     }
 
     switch (event.keyCode) {
       case 13: //enter
@@ -103,6 +110,12 @@ export default class Controller {
   }
 
   handleKeyUp(event) {
+
+    if (!this.isPlaying) {
+      return;
+    }
+
+
     switch (event.keyCode) {
       case 40: //down
         this.startTimer();
@@ -150,5 +163,6 @@ export default class Controller {
         }
         break;
     }
+    target.blur();
   };
 }
